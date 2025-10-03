@@ -15,10 +15,10 @@
 load('D:\GRIN2A_data_code\data for figures\Data_final.mat')
 
 %%
-load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\phr_large_mean_combine.mat')
+load('D:\GRIN2A_data_code\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\phr_large_mean_combine.mat')
 %PHR_Large_mean_combined=PHR_Large_mean(:,:,1:4,:,:,:);
 
-load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\PHR_grin_search_coarse_exp_alphamore250330backup.mat', 'alphalist','noisyfactorhrlist','hr_std0list','lr_stdlist');
+load('D:\GRIN2A_data_code\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\PHR_grin_search_coarse_exp_alphamore250330backup.mat', 'alphalist','noisyfactorhrlist','hr_std0list','lr_stdlist');
 hr_std0list=0.025:0.025:0.7;
 
 %%

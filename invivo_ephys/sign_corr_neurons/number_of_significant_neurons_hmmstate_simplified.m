@@ -6,6 +6,7 @@
 %new version fix the HR request to previous HR request instead of upcoming
 
 %20220425: add more previous trials and HMM states
+clear all
 
 Neurontype='MD';
 Neuronsubtype='RS';
