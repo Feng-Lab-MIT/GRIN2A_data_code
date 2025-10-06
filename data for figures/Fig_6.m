@@ -142,7 +142,26 @@ S_M_SSFO_ON=estimateSEM(M_SSFO_ON_all);
 error_area(X,M_M_SSFO_ON_all, S_M_SSFO_ON, [1,0.3,0.3], 0.5,7)
 
  
- 
+ disp('SSFO_inhibition_OFF p(HR), each animal')
+disp(M_SSFO_OFF_all) 
+disp('SEM of SSFO_OFF p(HR)')
+disp(S_M_SSFO_OFF)
+
+disp('SSFO_inhibition_ON p(HR), each animal')
+disp(M_SSFO_ON_all) 
+disp('SEM of SSFO_inhibition_ON p(HR)')
+disp(S_M_SSFO_ON)
+
+disp('block length of SSFO_inhibition_OFF')
+disp(M_BL_SSFO_OFF_all)
+disp('block length of SSFO_inhibition_ON')
+disp(M_BL_SSFO_ON_all)
+
+disp('optimality of SSFO_inhibition_OFF')
+disp(M_optimality_SSFO_OFF_all)
+disp('optimality of SSFO_inhibition_ON')
+disp(M_optimality_SSFO_ON_all)
+
  
 %plot MD_WT and PL_WT
 
