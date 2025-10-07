@@ -189,8 +189,10 @@ for si=1:numel(PHRratioHET)
 end
 
 %%
-
-
+disp('WT parameters')
+disp(WT_ind_bestparameters)
+disp('Mutant parameters')
+disp(grin2a_ind_bestparameters)
 
 %%
 

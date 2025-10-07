@@ -28,8 +28,8 @@ interestedneuronUnit=5;
 
 
 %%
-rasterfilepath='D:\paper_code_20250317\ephys example neurons\2021-09-03_11-53-12\RasterData.mat';%'Z:\LeverPressing\ephys\2021-09-03_11-53-12\RasterData.mat';
-unalignrasterfilepath='D:\paper_code_20250317\ephys example neurons\2021-09-03_11-53-12\UnalignedData.mat';%'Z:\LeverPressing\ephys\2021-09-03_11-53-12\UnalignedData.mat';
+rasterfilepath='D:\GRIN2A_data_code\invivo_ephys\ephys example neurons\2021-09-03_11-53-12\RasterData.mat';%'Z:\LeverPressing\ephys\2021-09-03_11-53-12\RasterData.mat';
+unalignrasterfilepath='D:\GRIN2A_data_code\invivo_ephys\ephys example neurons\2021-09-03_11-53-12\UnalignedData.mat';%'Z:\LeverPressing\ephys\2021-09-03_11-53-12\UnalignedData.mat';
 %%
 sessiondate=strcat(rasterfilepath(end-31:end-30),rasterfilepath(end-28:end-27),rasterfilepath(end-25:end-24));
 Windowsize=2;
