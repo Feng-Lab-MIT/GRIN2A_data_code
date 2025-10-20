@@ -9,11 +9,11 @@ Behavior data for generating figures in figS9 and figS10 are stored in 'Fig_S9_a
 
 4. In '/Data for figures' folder, Use  'Fig.1.m', 'Fig.5.m', 'Fig.6.m' and 'Fig.S9_and-figS10.m' to compute the parameters we presented in figure 1, 5, 6, S9 and S10. Plots and statistics were done in  '/data/Fig.1_3_6_S9_S10_behavior.prism'.
 
-5. HMM data in fig2, 5, 6 can be found in 'Fig.2_5_6_HMM.prism'. Code for generating these data can be found in folder '\GRIN2A_data_code\model_hmm_bayesian\HMM'. Raw data and intermedia data is stored at the same folder.
+5. HMM data in figure 2, 5, 6 can be found in 'Fig.2_5_6_HMM.prism'. Code for generating these data can be found in folder '\GRIN2A_data_code\model_hmm_bayesian\HMM'. Raw data and intermedia data is stored at the same folder.
 
 6. Bayesian inference data were plotted in 'Fig.2_baysian_final.prism' and 'Fig.2_baysian_HMM.prism'.Code for generating these data can be found in folder '\GRIN2A_data_code\model_hmm_bayesian\Bayesian'. Raw data and intermedia data is stored in the same folder
 
-7. figure3.a fUS results can be found in ‘Fig3.a_fUS_ReHomo.prism’ under folder 'data for figures'. The matlab code  '\GRIN2A_data_code\fUS\fig_3a_local_connect_step4_comp_atlas_v2_20240907KCC.m'. Raw data and intermedia data is stored at '\GRIN2A_data_code\fUS'
+7. figure 3a fUS results can be found in ‘Fig3.a_fUS_ReHomo.prism’ under folder 'data for figures'. The matlab code  '\GRIN2A_data_code\fUS\fig_3a_local_connect_step4_comp_atlas_v2_20240907KCC.m'. Raw data and intermedia data is stored at '\GRIN2A_data_code\fUS'
 
 8. figure3 in vivo ephys results can be found in '\GRIN2A_data_code\data for figures\Fig_3c_invivo.m' and 'Fig.3d.prism'.
 
