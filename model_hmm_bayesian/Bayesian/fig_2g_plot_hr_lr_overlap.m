@@ -1,4 +1,4 @@
-load('D:\GRIN2A_data_code\model_hmm_bayesian\Bayesian\2025results\best_fitting_individual_animal_hr_025.mat')
+load('2025results\best_fitting_individual_animal_hr_025.mat')
 
 %%
 data=[WT_ind_bestparameters];

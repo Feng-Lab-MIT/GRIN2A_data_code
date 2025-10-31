@@ -1,10 +1,7 @@
 
-load('D:\GRIN2A_data_code\data for figures\Data_final.mat')
-addpath('D:\paper_code_20250317\model_hmm_bayesian')
-%%
-load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\2025results\best_fitting_individual_animal_hr_025.mat');
-%load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\phr_large_mean_combine.mat')
-load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\PHR_grin_search_coarse_exp_alphamore250330.mat', 'alphalist','noisyfactorhrlist','hr_std0list','lr_stdlist');
+load('..\..\data for figures\Data_final.mat')
+load('2025results\best_fitting_individual_animal_hr_025.mat');
+load('generate_phr_for_grid_search\PHR_grin_search_coarse_exp_alphamore250330.mat', 'alphalist','noisyfactorhrlist','hr_std0list','lr_stdlist');
 hr_std0list=0.025:0.025:0.7;
 
 

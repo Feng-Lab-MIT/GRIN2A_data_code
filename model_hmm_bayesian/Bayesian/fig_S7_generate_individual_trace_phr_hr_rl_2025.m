@@ -1,12 +1,6 @@
 
-load('D:\GRIN2A_data_code\data for figures\Data_final.mat')
-addpath('D:\paper_code_20250317\model_hmm_bayesian')
-%%
-load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\2025results\best_fitting_individual_animal_rl.mat');
-%load('D:\paper_code_20250317\model_hmm_bayesian\Bayesian\generate_phr_for_grid_search\phr_large_mean_combine.mat')
-
-
-addpath('D:\paper_code_20250317\model_hmm_bayesian')
+load('..\..\data for figures\Data_final.mat')
+load('2025results\best_fitting_individual_animal_rl.mat');
 %%
 
 

@@ -1,53 +1,48 @@
 function [h2] = plot_phr_hr(mat_block)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
-    %%
 
-        addpath 'D:\paper_code_20250317\model_hmm_bayesian'     
-        for blocki=1:length(mat_block)
-            
-            %20250405 remove trials where hr.reward=0 but hr.
-            
-            unfinishtrial=(mat_block{blocki}.LRchoice==0)&(mat_block{blocki}.HRreward==0);
-            filterunfinishtrial=~unfinishtrial;
-            
-            if sum(strcmp(fieldnames(mat_block{blocki}),'blockOnset'))>0
-                if mat_block{blocki}.blockOnset>0
-                    blockonset=mat_block{blocki}.blockOnset;
-                    %actions{blocki}=mat_block{blocki}.HRreward(blockonset:end)>0;
-                    %pressn{blocki}=mat_block{blocki}.HRpress(blockonset:end).*actions{blocki};
-                elseif mat_block{blocki}.blockOnset==0
-                    blockonset=find(mat_block{blocki}.HRreward(1:find(mat_block{blocki}.HRpress==2)-4)>0,1,'last');
-                    %actions{blocki}=mat_block{blocki}.HRreward(blockonset:end)>0;
-                    %pressn{blocki}=mat_block{blocki}.HRpress(blockonset:end).*actions{blocki};
-
-                end
-            else
+    for blocki=1:length(mat_block)
+        
+        %20250405 remove trials where hr.reward=0 but hr.
+        
+        unfinishtrial=(mat_block{blocki}.LRchoice==0)&(mat_block{blocki}.HRreward==0);
+        filterunfinishtrial=~unfinishtrial;
+        
+        if sum(strcmp(fieldnames(mat_block{blocki}),'blockOnset'))>0
+            if mat_block{blocki}.blockOnset>0
+                blockonset=mat_block{blocki}.blockOnset;
+                %actions{blocki}=mat_block{blocki}.HRreward(blockonset:end)>0;
+                %pressn{blocki}=mat_block{blocki}.HRpress(blockonset:end).*actions{blocki};
+            elseif mat_block{blocki}.blockOnset==0
                 blockonset=find(mat_block{blocki}.HRreward(1:find(mat_block{blocki}.HRpress==2)-4)>0,1,'last');
                 %actions{blocki}=mat_block{blocki}.HRreward(blockonset:end)>0;
                 %pressn{blocki}=mat_block{blocki}.HRpress(blockonset:end).*actions{blocki};
-            end
-            
-            blockonset_to_end=ones(length(mat_block{blocki}.HRreward),1);
-            blockonset_to_end(1:blockonset-1)=0;
-            
-            
-            %trialtokeep=blockonset_to_end.*filterunfinishtrial;
-            trialtokeep=blockonset_to_end;
-            
-            action_b=(mat_block{blocki}.HRreward);
-            pressn_b=(mat_block{blocki}.HRpress);
-            action_b=action_b(trialtokeep>0);
-            pressn_b=pressn_b(trialtokeep>0);
-            
-            actions{blocki}=action_b>0;
-            pressn{blocki}=pressn_b;
 
-           
+            end
+        else
+            blockonset=find(mat_block{blocki}.HRreward(1:find(mat_block{blocki}.HRpress==2)-4)>0,1,'last');
+            %actions{blocki}=mat_block{blocki}.HRreward(blockonset:end)>0;
+            %pressn{blocki}=mat_block{blocki}.HRpress(blockonset:end).*actions{blocki};
         end
         
-        actions=actions(~cellfun('isempty',actions));
-        pressn=pressn(~cellfun('isempty',pressn));
+        blockonset_to_end=ones(length(mat_block{blocki}.HRreward),1);
+        blockonset_to_end(1:blockonset-1)=0;
+        
+        
+        %trialtokeep=blockonset_to_end.*filterunfinishtrial;
+        trialtokeep=blockonset_to_end;
+        
+        action_b=(mat_block{blocki}.HRreward);
+        pressn_b=(mat_block{blocki}.HRpress);
+        action_b=action_b(trialtokeep>0);
+        pressn_b=pressn_b(trialtokeep>0);
+        
+        actions{blocki}=action_b>0;
+        pressn{blocki}=pressn_b;
+
+    end
+    
+    actions=actions(~cellfun('isempty',actions));
+    pressn=pressn(~cellfun('isempty',pressn));
         
         
         
@@ -85,9 +80,6 @@ function [h2] = plot_phr_hr(mat_block)
 
     legend([h2.mainLine],{'real wt'});
     legend('boxoff');
-
-    %saveas(gcf,strcat('fig_generated_data_wt','.fig'));
-    %close all
 
     save(strcat('generated_data_wt20240707','.mat'));
 end

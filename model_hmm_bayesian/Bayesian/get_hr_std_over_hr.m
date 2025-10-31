@@ -1,6 +1,6 @@
 
 function [hr_std_all]=get_hr_std_over_hr(lr,noisyfactorhr,hr_std0)
-    addpath('D:\paper_code_20250317\model_hmm_bayesian')
+
     hr_m0=1;
     alpha=2-(1/lr);
 

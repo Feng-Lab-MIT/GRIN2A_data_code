@@ -119,8 +119,7 @@ for BlockN=1:numel(fieldnames(f.RasterData.SpikingData))-2
     
  
     %hmm:
-    %load('D:\20220214 process behavior data\hmm model\hmm_control_emiss_trans_mat','Tguessoff','Eguessoff');
-    load('D:\paper_code_20250317\ephys example neurons\hmm_control_emiss_trans_mat','Tguessoff','Eguessoff');
+    load('..\ephys example neurons\hmm_control_emiss_trans_mat.mat','Tguessoff','Eguessoff');
 
     ActSeq=[2*(actions==1)+1*(actions==-1)]';
     [PSTATES] = hmmdecode(ActSeq, Tguessoff, Eguessoff);
@@ -130,7 +129,6 @@ for BlockN=1:numel(fieldnames(f.RasterData.SpikingData))-2
     Blockinfo{BlockN}(:,23)=Istate;
 
     %get behavior ambiguity
-    %af=load('D:\20210921 model revision\20211015 real behavioral data\STDbehavior.mat');
     af=load('STDbehavior.mat');
     behambiguity=zeros(size(states,1),size(states,2));
     if ~isempty(find(hrlrrequest==2))

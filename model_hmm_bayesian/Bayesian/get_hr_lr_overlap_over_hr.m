@@ -1,7 +1,7 @@
 %20250509 edit calculation of overlapped area
 
 function [overlap_hr_lr_all,overlap_hr_lr_all_mean]=get_hr_lr_overlap_over_hr(lr,noisyfactorhr,hr_std0, lr_std)
-    addpath('D:\paper_code_20250317\model_hmm_bayesian')
+
     hr_m0=1;
     alpha=2-(1/lr);
     lr_m=6;

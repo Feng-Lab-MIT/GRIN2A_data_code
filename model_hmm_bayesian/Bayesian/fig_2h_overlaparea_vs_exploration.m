@@ -1,7 +1,5 @@
-load('D:\GRIN2A_data_code\model_hmm_bayesian\Bayesian\2025results\best_fitting_individual_animal_hr_025.mat')
-
-%load('C:\Users\admin\MIT Dropbox\Tingting Zhou\CareerDevelopment\Grin2aManuscript\submit to science\data for figures\Data_final.mat')
-load('D:\GRIN2A_data_code\data for figures\Data_final.mat')
+load('2025results\best_fitting_individual_animal_hr_025.mat')
+load('..\..\data for figures\Data_final.mat')
 %SSFO_ON_sub=structure_data_into_animalID(SSFO_ON);
 %SSFO_OFF_sub=structure_data_into_animalID(SSFO_OFF);
 %MD_ON_sub=structure_data_into_animalID(MD_ON);
@@ -10,7 +8,6 @@ WT_sub=structure_data_into_animalID(WT);
 grin2a_sub=structure_data_into_animalID(grin2a);
 
 %%
-addpath('D:\paper_code_20250317\model_hmm_bayesian\HMM')
 
 data=[WT_ind_bestparameters];
 F=fieldnames(WT_sub);

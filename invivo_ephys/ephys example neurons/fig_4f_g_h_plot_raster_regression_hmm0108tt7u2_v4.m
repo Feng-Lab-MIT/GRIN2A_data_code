@@ -23,10 +23,8 @@ fieldname='Initiation';
 Neurontype='MD';
 
 %%
-%addpath('D:\20210907 New ephys data\20210915 complete regression with model parameters\');
-addpath('Y:\Jonathan\plots\');
-rasterfilepath='D:\paper_code_20250317\ephys example neurons\2022-01-08_18-47-35\RasterData.mat'; %'Z:\LeverPressing\ephys\2022-01-08_18-47-35\RasterData.mat';
-unalignrasterfilepath='D:\paper_code_20250317\ephys example neurons\2022-01-08_18-47-35\UnalignedData.mat'; %'Z:\LeverPressing\ephys\2022-01-08_18-47-35\UnalignedData.mat';
+rasterfilepath='2022-01-08_18-47-35\RasterData.mat';
+unalignrasterfilepath='2022-01-08_18-47-35\UnalignedData.mat';
 sessiondate=strcat(rasterfilepath(end-31:end-30),rasterfilepath(end-28:end-27),rasterfilepath(end-25:end-24));
 Windowsize=2;
 Increment=0.5;
@@ -74,8 +72,6 @@ if ~isempty(selectedblock)
         hrlrrequest=Blockinfo{BlockN}(:,2);
 
         %hmm:
-        %load('D:\20220214 process behavior data\hmm model\hmm_control_emiss_trans_mat','Tguessoff','Eguessoff');
-        %load('\\fenglab03\yiyun\20241221 manuscript_code_upload\ephys example neurons\hmm_control_emiss_trans_mat.mat','Tguessoff','Eguessoff');
         load('hmm_control_emiss_trans_mat.mat','Tguessoff','Eguessoff');
         ActSeq=[2*(actions==1)+1*(actions==-1)]';
         [PSTATES] = hmmdecode(ActSeq, Tguessoff, Eguessoff);

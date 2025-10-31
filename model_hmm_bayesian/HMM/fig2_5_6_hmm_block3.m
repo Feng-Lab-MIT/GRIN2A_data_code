@@ -8,11 +8,7 @@
 %to do: start from block start and end at block end <<< 
 
 %how to determine the state??? true state??
-%load('D:\20221001 new model\final data for paper\Sum_Data_All.mat');
-%load('/Volumes/My Passport/backup/20220214 process behavior data/behavioral data/none_manipulate/cont1_Yiyun.mat');
-%load('\\fenglab03\yiyun\20221031 new data_and_model\old data 20221028\data_all_10282022.mat');
-%load('\\\\fenglab03\yiyun\20241221 manuscript_code_upload\20240615 new model for revision\HMM\data_all_10282022.mat');
-load('D:\GRIN2A_data_code\data for figures\Data_final.mat')
+load('..\..\data for figures\Data_final.mat')
 
 [seqOFF,Tguessoff,Eguessoff,PSTATESoff,s1poff,s2poff,s3poff,s1poffc,s2poffc,s3poffc,NLLoff]=gethmmstate(SSFO_OFF,0.8);
 [seqON,Tguesson,Eguesson,PSTATESon,s1pon,s2pon,s3pon,s1ponc,s2ponc,s3ponc,NLLon]=gethmmstate(SSFO_ON,0.8);
