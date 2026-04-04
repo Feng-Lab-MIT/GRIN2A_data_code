@@ -1,3 +1,14 @@
+# *Grin2a* belief dynamics
+
+Data and analysis code for belief updating, fUS, and electrophysiology in *Grin2a* mice.
+
+## Paper
+
+Zhou, T. et al.
+Reduced mediodorsal thalamus activity underlies aberrant belief dynamics in a genetic mouse model of schizophrenia.
+*Nature Neuroscience* (2026).
+[doi:10.1038/s41593-026-02237-9](https://doi.org/10.1038/s41593-026-02237-9)
+
 ## How to download the project in MATLAB
 
 > [!WARNING]
